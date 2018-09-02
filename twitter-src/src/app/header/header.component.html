@@ -1,0 +1,22 @@
+<div id="header" class="fixed-top">
+    <div class="container fluid">
+        <div class="row">
+            <ul class="nav">
+              <li class="nav-item">
+                <a class="nav-link active" href="#/">
+                  Timeline
+                </a>
+            </ul>
+            <form class="form-inline"  #f="ngForm" (ngSubmit)="onSubmit(f)">
+                <div class="input-group">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text" id="basic-addon1">@</span>
+                  </div>
+                  <input type="text" name="username" ngModel class="form-control" placeholder="Search by Username" aria-label="Username" aria-describedby="basic-addon1">
+                </div>
+              </form>
+
+        </div>
+      </div>
+</div>
+

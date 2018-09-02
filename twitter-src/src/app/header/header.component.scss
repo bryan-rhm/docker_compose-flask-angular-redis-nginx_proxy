@@ -1,0 +1,27 @@
+@import '../../styles';
+#header{
+    background-color: #FFF;
+    .nav{
+        margin-bottom: 0 !important;
+        margin-top: 1rem !important;
+        .nav-item{
+            a{
+                text-decoration: none;
+                color:$gray;
+                transition: 0.5s;
+                border-bottom:2px solid  transparent;
+                &:hover{
+                    border-bottom: 2px solid $blue;
+                }
+            }
+        }
+    }
+    .row{
+        position: relative;
+    }
+    form{
+        right: 0;
+        position: absolute;
+        margin: 10px;
+    }
+}

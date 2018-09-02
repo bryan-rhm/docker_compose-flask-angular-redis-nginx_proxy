@@ -1,0 +1,31 @@
+
+<div class="container">
+  <div class="row justify-content-center">
+      <div class="col-sm-12 col-md-8">
+        <h2 *ngIf="user_id">
+          @{{user_id}}
+        </h2>
+        <div class="list-group">
+          <div class=" form-group list-group-item list-group-item-action" *ngIf="!user_id">
+              <form #f="ngForm" (ngSubmit)="onSubmit(f)">
+                <Label>Username:</Label>
+                <input type="text" name="user" ngModel class="form-control col-4" required >
+                <br>
+                <textarea class="form-control" ngModel name="message" rows="5" id="newTweet" placeholder="What is on your mind?"></textarea>
+                <button class=" float-right " type="submit">Send</button>
+              </form>
+          </div>
+            <div *ngFor="let tweet of tweets ;let index = index;trackBy:trackByIndex;"  class="list-group-item list-group-item-action">
+              <div>
+                @{{tweet.user}}
+              </div>
+              <div>
+                {{tweet.message}}
+              </div>
+            </div>
+        </div>
+
+        <div  *ngIf="tweets && !tweets.length>0"> <h3>I'm sorry no tweets were found!</h3></div>
+      </div>
+  </div>
+</div>

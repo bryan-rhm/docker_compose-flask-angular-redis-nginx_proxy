@@ -1,0 +1,32 @@
+/* You can add global styles to this file, and also import other style files */
+@import '~bootstrap/scss/bootstrap-reboot';
+@import '~bootstrap/scss/bootstrap-grid';
+
+$blue:#1da1f2;
+$font_blue:rgb(47, 140, 199);
+$gray: rgb(102, 117, 127);
+
+body{
+    background-color: #e6ecf0 !important;
+    padding-top:59px;
+    padding-bottom: 59px;
+
+    button{
+        margin-top:15px;
+        background-color: #46CEFF;
+        color:#FFF;
+        border-radius: 100px;
+        box-shadow: none;
+        cursor: pointer;
+        font-size: 14px;
+        font-weight: bold;
+        line-height: 20px;
+        padding: 6px 16px;
+        position: relative;
+        text-align: center;
+        white-space: nowrap;
+        border: 1px solid #1da1f2;
+        border-color: transparent;
+    }
+}
+
