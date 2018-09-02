@@ -1,0 +1,26 @@
+version: '3'
+services:
+  flask:
+    build: flask/
+    hostname: flask
+    volumes:
+     - ./flask/api:/usr/src/app
+    depends_on:
+     - redis
+     - nginx-proxy
+  redis:
+    image: "redis:latest"
+    hostname: redis
+  nginx-proxy:
+    hostname: nginx-proxy
+    build: nginx-proxy/
+    ports:
+     - "80:80"
+    restart: always
+  nginx-server:
+    hostname: nginx-server
+    build: nginx-server/
+    volumes:
+     - ./nginx-server/dist/twitter:/usr/share/nginx/html/
+    depends_on:
+     - nginx-proxy
